@@ -112,9 +112,11 @@ dokku memcached:link lolipop playground
 # and the following will be set on the linked application by default
 #
 #   MEMCACHED_URL=memcached://dokku-memcached-lolipop:11211
+#   JDBC_MEMCACHED_URL=memcached://dokku-memcached-lolipop:11211?user=&password=
 #
 # NOTE: the host exposed here only works internally in docker containers. If
 # you want your container to be reachable from outside, you should use `expose`.
+# As well, we shall omit the JDBC url from all following examples for brevity.
 
 # another service can be linked to your app
 dokku memcached:link other_service playground
